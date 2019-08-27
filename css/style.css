@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.container {
+	width: 1140p x;
+	margin: 0 auto;
+}
+.container::after {
+	content: "";
+	display: block;
+}
+.header {
+	width: 100%;
+	float: left;
+}
+.header-elements {
+	padding: 18px 16px;
+	float: left;
+}
+.header--logo {
+	width: 15%;
+}
+.header--logo i {
+	font-size: 25px;
+}
+.header--menus {
+	width: 50%;
+}
+.header--menus ul {
+	list-style: none;
+}
+.header--menus ul li {
+	display: inline-block;
+	padding: 0 10px;
+}
+.header--menus ul li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+}
+.header--sicons {
+	width: 35%;
+}
+.header--sicons ul {
+	list-style: none;
+}
+.header--sicons ul li {
+	display: inline-block;
+}
+.header--sicons ul a {
+	color: rgb(27, 27, 27);
+	font-size: 18px;
+	padding: 0 4px;
+}
+
+/*  image container section  */
+.img-container {
+	width: 100%;
+	float: left;
+	padding: 70px 0;
+	height: 450px;
+	background-color: #000;
+}
+.take-action {
+	background-color: #fff;
+	height: 100%;
+	margin-left: 150px;
+	width: 450px;
+}
+
+/*  Value Propostion */
+.row {
+	width: 100%;
+	float: left;
+	margin-top: 46px;
+	text-align: center;
+}
+.proposition-col {
+	height: 270px;
+	width: 23%;
+	padding: 0 1%;
+	display: inline-block;
+}
+.p-col-1 {
+	background-color: gray;
+}
+.p-col-2 {
+	background-color: cyan;
+}
+.p-col-3 {
+	background-color: orangered;
+}
+.p-col-4 {
+	background-color: lightgreen;
+}
+
+/*   This css is about "Investing"   */
+.col-invest {
+	height: 320px;
+	width: 45%;
+	padding: 2.5%;
+	display: inline-block;
+}
+.col-invest-1 {
+	background-color: orangered;
+}
+.col-invest-2 {
+	background-color: lightgreen;
+}
+
+/*  Blog    */
+.blog {
+	text-align: center;
+	color: #000;
+	font-size: 50px;
+	width: 100%;
+	display: inline-block;
+}
