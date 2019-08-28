@@ -3,10 +3,28 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-a {
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.7;
+}
+/*	Components	*/
+.btn-green {
 	text-transform: uppercase;
 	text-decoration: none;
+	padding: 6px 10px;
+	background-color: rgb(1, 145, 1);
+	color: white;
+	border-radius: 5px;
+	transition: all 0.2 ease;
+	cursor: pointer;
 }
+.btn-green:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
 .container {
 	width: 1140px;
 	margin: 0 auto;
@@ -26,8 +44,10 @@ a {
 .header--logo {
 	width: 15%;
 }
-.header--logo i {
+.header--logo p {
 	font-size: 25px;
+	font-family: "Lobster", cursive;
+	color: green;
 }
 .header--menus {
 	width: 50%;
@@ -59,19 +79,87 @@ a {
 	padding: 0 4px;
 }
 
+/*		Leave a Message	*/
+.leave-msg {
+	position: fixed;
+	bottom: 15vh;
+	right: 0;
+	background-color: rgba(19, 19, 19, 0.8);
+	padding: 2px 4px;
+	border-radius: 5px 0px 0px 5px;
+	font-family: "Lato";
+	font-size: 14px;
+	font-weight: normal;
+	color: white;
+	text-transform: capitalize;
+}
+.fa-envelope {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
 /*  image container section  */
 .img-container {
+	background: url("../img/bg-01.jpg");
+	background-size: cover;
+	background-position: center;
 	width: 100%;
 	float: left;
-	padding: 70px 0;
-	height: 450px;
-	background-color: #000;
+	padding: 28px;
+	height: 430px;
 }
 .take-action {
-	background-color: #fff;
+	background-color: rgba(31, 31, 31, 0.65);
 	height: 100%;
-	margin-left: 150px;
-	width: 450px;
+	margin-left: 200px;
+	width: 500px;
+	position: relative;
+	padding: 20px;
+	border-radius: 10px;
+}
+/*	Styling the action box	*/
+.cont-box {
+	width: 100%;
+	padding: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	margin: auto 0;
+}
+.cont-box p {
+	margin-top: 25px;
+	font-family: inherit;
+	font-size: 18px;
+	color: white;
+	font-weight: lighter;
+}
+.cont-box p a {
+	text-transform: uppercase;
+	padding: 6px 10px;
+	background-color: green;
+	color: white;
+	border-radius: 5px;
+}
+.cont-box p a:not(:last-child) {
+	margin-right: 15px;
+}
+.heading-primary {
+	color: white;
+	text-transform: uppercase;
+	margin-top: -55px;
+}
+.heading-primary-1 {
+	display: block;
+	font-size: 60px;
+	font-weight: 700;
+}
+.heading-primary-2 {
+	display: block;
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 60%;
 }
 
 /*  Value Propostion */
@@ -80,38 +168,85 @@ a {
 	float: left;
 	margin-top: 46px;
 	text-align: center;
+	display: block;
 }
 .proposition-col {
-	height: 270px;
 	width: 23%;
 	padding: 0 1%;
 	display: inline-block;
 }
-.p-col-1 {
-	background-color: gray;
+.mar-bot-20 {
+	margin-bottom: 20px;
 }
-.p-col-2 {
+.p-col-1 {
+	margin: auto;
+}
+.proposition-col .icon-box i {
+	border-radius: 100%;
+	padding: 20px;
 	background-color: cyan;
+	font-size: 38px;
+	margin-bottom: 22px;
+}
+
+.p-col-2 {
+	margin: auto;
 }
 .p-col-3 {
-	background-color: orangered;
+	margin: auto;
 }
 .p-col-4 {
-	background-color: lightgreen;
+	margin: auto;
 }
 
 /*   This css is about "Investing"   */
 .col-invest {
-	height: 320px;
-	width: 45%;
-	padding: 2.5%;
+	width: 40%;
+	padding: 4.5%;
 	display: inline-block;
 }
+.bg-grey {
+	background-color: #b7ccd3;
+}
+.col-invest h2 {
+	width: 100%;
+	float: left;
+	color: black;
+	margin-bottom: 10px;
+	font-family: "Lato";
+	font-weight: 700;
+}
+.col-invest:not(:last-child) {
+	margin-right: 70px;
+}
+.col-invest ul {
+	width: 100%;
+	float: left;
+	list-style: none;
+	padding: none;
+}
+.col-invest li {
+	padding-left: 18px;
+	text-align: left;
+}
+.col-invest li::before {
+	content: "\f058";
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: -18px;
+	color: green;
+	width: 22px;
+}
+.invest-btn {
+	display: inline-block;
+	margin-top: 25px;
+	float: left;
+}
+/*	Styling the list	*/
+
 .col-invest-1 {
-	background-color: orangered;
 }
 .col-invest-2 {
-	background-color: lightgreen;
 }
 
 /*  Blog    */
@@ -121,4 +256,85 @@ a {
 	font-size: 50px;
 	width: 100%;
 	display: inline-block;
+}
+.blog-post {
+	background-color: #fff;
+	padding: 0;
+}
+.blog-post h2 {
+	color: blue;
+	text-align: left;
+}
+.blog-post p {
+	text-align: left;
+}
+
+/*	Designing Records*/
+.record {
+	width: 100%;
+	float: left;
+	background-color: #dcdcdc;
+	padding: 26px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.record ul {
+	list-style: none;
+}
+.record ul li {
+	text-align: center;
+	padding: 3px;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+/*	Trust Score	 */
+.trust-score {
+	width: 100%;
+	float: left;
+	background-color: #dcdcdc;
+	padding: 26px;
+	margin-top: 60px;
+}
+.trust-score ul {
+	list-style: none;
+}
+.trust-score ul li {
+	text-align: center;
+	padding: 3px;
+	font-size: 18px;
+	font-weight: 400;
+}
+.trust-score ul li i {
+	font-size: 28px;
+	padding: 3.5px 3px;
+	background-color: #73cf11;
+	color: white;
+}
+.trust-score ul li i:last-child {
+	background-color: #9e9e9e;
+}
+
+/*	Footer Design	*/
+footer {
+	background-color: #052d3a;
+	width: 100%;
+	float: left;
+	padding: 36px auto;
+}
+footer p {
+	font-weight: lighter;
+	font-family: "Lato";
+	line-height: 120%;
+}
+.footer-box {
+	color: white;
+	width: 100%;
+	display: inline-block;
+}
+footer .col-invest {
+	padding: 1%;
+}
+footer .row {
+	margin-top: 0;
 }
