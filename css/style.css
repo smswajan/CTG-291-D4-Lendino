@@ -47,6 +47,14 @@ body {
 	content: "";
 	display: block;
 }
+.fixed-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: +1;
+	box-shadow: 0 2px 8px rgba(31, 31, 31, 0.6);
+}
 .header {
 	width: 100%;
 	float: left;
@@ -184,10 +192,10 @@ body {
 .img-container {
 	background: url("../img/bg-07.jpg");
 	background-size: cover;
-	background-position: center;
+	background-position: top center;
 	width: 100%;
 	float: left;
-	padding: 28px;
+	padding: 70px 0;
 	height: 430px;
 }
 .take-action {
